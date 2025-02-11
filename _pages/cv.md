@@ -12,9 +12,9 @@ redirect_from:
 Education
 ======
 * M.S. in Industrial and Systems Engineering, Virginia Tech. (2023.08 ~ 2025.05)
-  * - Human Factors Engineering and Ergonomics Focus
-  *- Thesis Title: Understanding and Predicting Sit-Stand Desk Usage Patterns and Willingness among Knowledge Workers: A Data-Driven Approach
-  *- Graduate Certificate in Human-Computer Interaction
+  * Human Factors Engineering and Ergonomics Focus
+  * Thesis Title: Understanding and Predicting Sit-Stand Desk Usage Patterns and Willingness among Knowledge Workers: A Data-Driven Approach
+  * Graduate Certificate in Human-Computer Interaction
 * B.S. in Industrial Engineering, Yonsei University. (2017.03 ~ 2023.02)
 
 Research Interest
@@ -28,8 +28,8 @@ Research Interest
 Research Experience
 ======
 * Virginia Tech
-  * - Research Assistant, OEB Lab (2023.08 ~)
-  * - P.I: Dr.Sol Lim
+  * Research Assistant, OEB Lab (2023.08 ~)
+  * P.I: Dr.Sol Lim
 
 
 Skills
