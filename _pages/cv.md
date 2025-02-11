@@ -11,37 +11,38 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* M.S. in Industrial and Systems Engineering, Virginia Tech. (2023.08 ~ 2025.05)
+  * - Human Factors Engineering and Ergonomics Focus
+  *- Thesis Title: Understanding and Predicting Sit-Stand Desk Usage Patterns and Willingness among Knowledge Workers: A Data-Driven Approach
+  *- Graduate Certificate in Human-Computer Interaction
+* B.S. in Industrial Engineering, Yonsei University. (2017.03 ~ 2023.02)
 
-Work experience
+Research Interest
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Data-driven Prediction Models using ML/DL Algorithms
+* Human Pattern Prediction using Context and Complex Data
+* Pseudo-labeling & Data Imputation for subjective measures using ML/DL
+* Human Performance Enhancement using Personalized Digital Intervention
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
+Research Experience
+======
+* Virginia Tech
+  * - Research Assistant, OEB Lab (2023.08 ~)
+  * - P.I: Dr.Sol Lim
+
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Python, MySQL, LaTex
+* ML/DL/Data Science/Data Analsis
+  * scikit-learn
+  * tensorflow
+  * pytorch
+* Quantitative Analysis
+* Qualitative Analysis
 
-Publications
+
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
@@ -59,6 +60,17 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
+Extra Activities
 ======
-* Currently signed in to 43 different slack teams
+* Virginia Tech
+  * Member of HFES Student Chapter at Virginia Tech
+  * Member of Center for Human-Computer Interaction at Virginia Tech
+  * Member of KSEA, Southern Virginia Chapter
+
+* Yonsei University
+  * Member of YBIGTA, Student Big Data Society
+
+Leadership and Other Experiences
+======
+* President of Industrial Engineering Student Council, Yonsei University (2018.11 ~ 2019.11)
+* Republic of Korea ARMY, 22nd division (2019.12 ~ 2021.07)
