@@ -35,7 +35,7 @@ Research Experience
 Skills
 ======
 * Python, MySQL, LaTex
-* ML/DL/Data Science/Data Analsis
+* ML/DL/Data Science/Data Analysis
   * scikit-learn
   * tensorflow
   * pytorch
