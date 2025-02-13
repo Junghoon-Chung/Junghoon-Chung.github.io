@@ -43,23 +43,11 @@ Skills
 * Qualitative Analysis
 
 
+Publications
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
+* Workshop
+  * W1. Hu, D., Chung, J., Vargas-Diaz, D., Lim, S., & Lee, SW. Developing Context-Aware Sit-Stand Desks for Promoting Healthy and Productive Behaviors. CHI 2024 Office Wellbeing by Design Workshop.
+
 Extra Activities
 ======
 * Virginia Tech
