@@ -26,23 +26,19 @@
     body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden;transition:background .4s,color .4s}
     body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.2;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E")}
 
-    /* CURSOR */
-    .cursor{width:10px;height:10px;border-radius:50%;background:var(--accent);position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:multiply}
-    .cursor-ring{width:34px;height:34px;border:1px solid var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;opacity:.4}
-    [data-theme="dark"] .cursor{mix-blend-mode:screen}
 
     /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3.5rem;backdrop-filter:blur(16px);background:var(--nav-bg);border-bottom:1px solid var(--line);transition:padding .3s,background .4s}
-    nav.scrolled{padding:.75rem 3.5rem}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;backdrop-filter:blur(16px);background:var(--nav-bg);border-bottom:1px solid var(--line);transition:padding .3s,background .4s}
+    nav.scrolled{padding:.7rem 3rem}
     .nav-left{display:flex;align-items:center;gap:.8rem}
     .nav-uw-mark{font-family:'Georgia',serif;font-size:1rem;font-weight:bold;color:#fff;background:var(--uw-purple);width:26px;height:26px;display:flex;align-items:center;justify-content:center;flex-shrink:0;letter-spacing:-.02em}
     .nav-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;letter-spacing:.04em;color:var(--ink);text-decoration:none}
-    .nav-right{display:flex;align-items:center;gap:1.5rem}
-    .nav-links{display:flex;gap:1.8rem;list-style:none}
-    .nav-links a{font-family:'DM Mono',monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;position:relative}
-    .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:1px;background:var(--accent);transform:scaleX(0);transition:transform .25s}
-    .nav-links a:hover{color:var(--accent)}
-    .nav-links a:hover::after{transform:scaleX(1)}
+    .nav-center{display:flex;align-items:center;gap:1.6rem;list-style:none;margin-left:2rem}
+    .nav-right{display:flex;align-items:center;gap:1.2rem}
+    .nav-center a{font-family:'DM Mono',monospace;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;position:relative}
+    .nav-center a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:1px;background:var(--accent);transform:scaleX(0);transition:transform .25s}
+    .nav-center a:hover{color:var(--accent)}
+    .nav-center a:hover::after{transform:scaleX(1)}
 
     /* Hamburger */
     .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
@@ -58,7 +54,7 @@
     section{position:relative;z-index:1}
 
     /* HERO */
-    #hero{min-height:100vh;display:grid;grid-template-columns:1.1fr 0.9fr;align-items:center;padding:8rem 3.5rem 5rem;gap:4rem}
+    #hero{display:grid;grid-template-columns:1.1fr 0.9fr;align-items:center;padding:4.5rem 3.5rem 3rem;gap:3rem}
     .hero-badge{display:inline-flex;align-items:center;gap:.6rem;background:rgba(75,46,131,.08);border:1px solid rgba(75,46,131,.2);border-radius:2px;padding:.4rem .9rem;margin-bottom:1.8rem;opacity:0;animation:fadeUp .8s .2s forwards}
     [data-theme="dark"] .hero-badge{background:rgba(160,127,218,.1);border-color:rgba(160,127,218,.25)}
     .hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite;flex-shrink:0}
@@ -88,7 +84,7 @@
     .uw-aff-school{font-family:'Cormorant Garamond',serif;font-size:.98rem;font-weight:400;color:var(--ink)}
 
     /* SECTION LAYOUT */
-    .section-divider{display:flex;align-items:center;gap:1.5rem;padding:0 3.5rem;margin-bottom:3.5rem}
+    .section-divider{display:flex;align-items:center;gap:1.5rem;padding:0 3.5rem;margin-bottom:2rem}
     .divider-label{font-family:'DM Mono',monospace;font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
     .divider-line{flex:1;height:1px;background:var(--line)}
     .divider-num{font-family:'Cormorant Garamond',serif;font-size:.9rem;color:var(--line)}
@@ -96,8 +92,8 @@
     .section-title em{font-style:italic;color:var(--accent)}
 
     /* ABOUT */
-    #about{padding:6rem 3.5rem}
-    .about-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
+    #about{padding:3.5rem 3.5rem}
+    .about-grid{display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start}
     .about-sidebar{position:sticky;top:8rem}
     .about-tagline{font-family:'DM Mono',monospace;font-size:.67rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
     .about-body p{color:var(--muted);margin-bottom:1.2rem;font-size:.96rem}
@@ -105,9 +101,9 @@
     .tag{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .75rem;border:1px solid var(--uw-gold);color:var(--accent);background:rgba(183,165,122,.08)}
 
     /* EDUCATION */
-    #education{padding:6rem 3.5rem;background:var(--card-bg);transition:background .4s}
+    #education{padding:3.5rem 3.5rem;background:var(--card-bg);transition:background .4s}
     .edu-timeline{display:flex;flex-direction:column}
-    .edu-item{display:grid;grid-template-columns:150px 1fr;gap:2.5rem;padding:2.5rem 0;border-bottom:1px solid var(--line);align-items:start}
+    .edu-item{display:grid;grid-template-columns:150px 1fr;gap:2rem;padding:1.6rem 0;border-bottom:1px solid var(--line);align-items:start}
     .edu-item:last-child{border-bottom:none}
     .edu-years{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--muted);padding-top:.4rem;line-height:1.6}
     .edu-main{}
@@ -124,9 +120,9 @@
     .edu-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .5rem;background:var(--accent);color:#fff;margin-top:.5rem}
 
     /* PROJECTS */
-    #research{padding:6rem 3.5rem}
-    .projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-    .project-card{background:var(--card-bg);border:1px solid var(--line);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,background .4s}
+    #research{padding:3.5rem 3.5rem}
+    .projects-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+    .project-card{background:var(--card-bg);border:1px solid var(--line);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,background .4s;display:flex;flex-direction:column}
     .project-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--uw-purple),var(--uw-gold));transform:scaleX(0);transform-origin:left;transition:transform .35s}
     .project-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
     .project-card:hover::after{transform:scaleX(1)}
@@ -145,13 +141,13 @@
     .project-perspective{display:none}
     .project-perspective.active{display:block}
     .project-desc{font-size:.83rem;color:var(--muted);line-height:1.75}
-    .project-card.wide{grid-column:span 2}
+    .project-card.wide{grid-column:span 1}
     /* Tab row only visible when card open */
     .project-tabs{display:none;margin:0 1.6rem;border-bottom:1px solid var(--line)}
     .project-card.open .project-tabs{display:flex}
 
     /* PUBLICATIONS */
-    #publications{padding:6rem 3.5rem;background:var(--card-bg);transition:background .4s}
+    #publications{padding:3.5rem 3.5rem;background:var(--card-bg);transition:background .4s}
     .pub-list{display:flex;flex-direction:column}
     .pub-item{display:grid;grid-template-columns:88px 1fr;gap:2rem;padding:1.8rem 0;border-bottom:1px solid var(--line);align-items:start}
     .pub-item:last-child{border-bottom:none}
@@ -166,7 +162,7 @@
     .pub-venue{font-family:'DM Mono',monospace;font-size:.64rem;color:var(--accent);letter-spacing:.05em}
 
     /* SKILLS */
-    #skills{padding:6rem 3.5rem}
+    #skills{padding:3.5rem 3.5rem}
     .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
     .skill-group-title{font-family:'DM Mono',monospace;font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.1rem;padding-bottom:.6rem;border-bottom:1px solid var(--line)}
     .skill-item{display:flex;align-items:center;gap:.75rem;margin-bottom:.8rem}
@@ -176,14 +172,14 @@
     .skill-bar-fill.animated{transform:scaleX(var(--level))}
 
     /* AWARDS */
-    #awards{padding:6rem 3.5rem;background:var(--uw-purple);color:#fff;transition:background .4s}
+    #awards{padding:3.5rem 3.5rem;background:var(--uw-purple);color:#fff;transition:background .4s}
     [data-theme="dark"] #awards{background:#1e1630}
     #awards .divider-label{color:var(--uw-gold)}
     #awards .divider-line{background:rgba(255,255,255,.12)}
     #awards .divider-num{color:rgba(255,255,255,.1)}
     #awards .section-title{color:#fff}
     #awards .section-title em{color:var(--uw-gold)}
-    .awards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.5rem}
+    .awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.2rem;margin-top:1.5rem}
     .award-card{border:1px solid rgba(255,255,255,.15);padding:1.7rem;transition:border-color .3s,transform .3s}
     .award-card:hover{border-color:var(--uw-gold);transform:translateY(-3px)}
     .award-year{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:rgba(255,255,255,.12);line-height:1;margin-bottom:.6rem}
@@ -191,7 +187,7 @@
     .award-org{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--uw-gold);letter-spacing:.1em}
 
     /* CONTACT */
-    #contact{padding:8rem 3.5rem;text-align:center}
+    #contact{padding:4rem 3.5rem;text-align:center}
     .contact-inner{max-width:620px;margin:0 auto}
     .contact-intro{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--muted);margin-bottom:2.2rem}
     .contact-links{display:flex;justify-content:center;gap:.9rem;flex-wrap:wrap;margin-bottom:1.5rem}
@@ -218,20 +214,19 @@
 
     /* ── MOBILE ── */
     @media(max-width:900px){
-      nav{padding:1rem 1.5rem}
-      nav.scrolled{padding:.75rem 1.5rem}
-      .nav-links{display:none}
+      nav{padding:.9rem 1.5rem}
+      nav.scrolled{padding:.65rem 1.5rem}
+      .nav-center{display:none}
       .hamburger{display:flex}
       #hero{grid-template-columns:1fr;padding:7rem 1.5rem 4rem;gap:2.5rem}
       .hero-visual{align-items:center}
       .hero-photo-wrap{width:200px;height:200px}
       .uw-affiliation{width:200px}
       .section-divider{padding:0 1.5rem}
-      #about,#education,#research,#publications,#skills,#awards,#contact{padding:4rem 1.5rem}
+      #about,#education,#research,#publications,#skills,#awards,#contact{padding:2.5rem 1.5rem}
       .about-grid{grid-template-columns:1fr;gap:2rem}
       .about-sidebar{position:static}
       .projects-grid{grid-template-columns:1fr}
-      .project-card.wide{grid-column:span 1}
       .skills-grid{grid-template-columns:1fr}
       .awards-grid{grid-template-columns:1fr 1fr}
       .edu-item{grid-template-columns:1fr;gap:.6rem}
@@ -248,9 +243,6 @@
   </style>
 </head>
 <body>
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-close" id="mobileClose">✕</button>
@@ -267,9 +259,7 @@
     <div class="nav-left">
       <span class="nav-uw-mark">W</span>
       <a href="#hero" class="nav-name">Junghoon Chung</a>
-    </div>
-    <div class="nav-right">
-      <ul class="nav-links">
+      <ul class="nav-center">
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#research">Research</a></li>
@@ -277,6 +267,8 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+    </div>
+    <div class="nav-right">
       <button class="theme-toggle" id="themeToggle">
         <span id="themeIcon">☽</span>
         <span id="themeLabel">Dark</span>
@@ -298,7 +290,7 @@
       <p class="hero-desc">Industrial &amp; Systems Engineering researcher building data-driven models of human behavior. Specializing in multimodal physiological sensing, machine learning, and user-centered intervention design.</p>
       <div class="hero-links">
         <a href="mailto:junghoon@uw.edu" class="btn btn-filled">Get in Touch</a>
-        <a href="https://scholar.google.com/citations?user=luqWtdEAAAAJ" target="_blank" class="btn">Scholar</a>
+        <a href="https://scholar.google.com/citations?user=_yF8Yt0AAAAJ&hl=en&oi=sra" target="_blank" class="btn">Scholar</a>
         <a href="https://www.linkedin.com/in/junghoon-chung" target="_blank" class="btn">LinkedIn</a>
       </div>
     </div>
@@ -428,10 +420,33 @@
     </div>
     <div class="projects-grid">
 
-      <div class="project-card wide reveal" id="card-vigilance">
+      <div class="project-card reveal" id="card-bellevue">
         <div class="project-header">
           <div class="project-header-left">
-            <div class="project-tag">University of Washington · Current</div>
+            <div class="project-tag">University of Washington · City of Bellevue · <span style="color:#22a05a;font-weight:500">Ongoing</span></div>
+            <div class="project-title">Driver Response to V2X Pedestrian Alerts</div>
+          </div>
+          <button class="project-expand-btn" onclick="toggleCard('card-bellevue')">+</button>
+        </div>
+        <div class="project-overview">Field study modeling driver cognitive and behavioral responses to smartphone-based pedestrian crosswalk alerts in a connected vehicle safety context.</div>
+        <div class="project-tabs">
+          <button class="project-tab-btn active" onclick="switchTab('card-bellevue','ux')">UX Research</button>
+          <button class="project-tab-btn" onclick="switchTab('card-bellevue','ds')">Data Science</button>
+        </div>
+        <div class="project-body">
+          <div class="project-perspective active" data-tab="ux">
+            <p class="project-desc">Designed study protocol, IRB documentation, and questionnaires in collaboration with the City of Bellevue, T-Mobile, and Applied Information. Conducted on-road driving sessions collecting contextual interview responses and NASA-TLX workload ratings. Evaluated effectiveness of V2X pedestrian alerts from a driver experience perspective.</p>
+          </div>
+          <div class="project-perspective" data-tab="ds">
+            <p class="project-desc">Collected and processed multimodal data: vehicle kinematics, Empatica E4 physiological signals (EDA, BVP, HR, skin temperature), and in-vehicle video. Integrated observer-logged event timestamps with synchronized sensor streams. Developed predictive models to assess driver alertness and yielding behavior at pedestrian crossings. Stack: Python, E4 Empatica SDK, signal processing pipelines.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" id="card-vigilance">
+        <div class="project-header">
+          <div class="project-header-left">
+            <div class="project-tag">University of Washington · <span style="color:#22a05a;font-weight:500">Ongoing</span></div>
             <div class="project-title">Human Vigilance Modeling with Causal Inference</div>
           </div>
           <button class="project-expand-btn" onclick="toggleCard('card-vigilance')">+</button>
@@ -451,7 +466,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal reveal-delay-1" id="card-sitstand">
+      <div class="project-card reveal" id="card-sitstand">
         <div class="project-header">
           <div class="project-header-left">
             <div class="project-tag">Virginia Tech</div>
@@ -474,7 +489,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal reveal-delay-2" id="card-robot">
+      <div class="project-card reveal" id="card-robot">
         <div class="project-header">
           <div class="project-header-left">
             <div class="project-tag">Virginia Tech</div>
@@ -497,7 +512,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal reveal-delay-1" id="card-bert">
+      <div class="project-card reveal" id="card-bert">
         <div class="project-header">
           <div class="project-header-left">
             <div class="project-tag">Yonsei University</div>
@@ -520,7 +535,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal reveal-delay-2" id="card-bio">
+      <div class="project-card reveal" id="card-bio">
         <div class="project-header">
           <div class="project-header-left">
             <div class="project-tag">Virginia Tech</div>
@@ -557,20 +572,36 @@
       <div class="pub-item reveal">
         <span class="pub-badge journal progress">Journal<br />In Progress</span>
         <div>
-          <div class="pub-title">Predictive Model of Sit-Stand Desk Usage Patterns among Knowledge Workers and Customization based on Behavior Clustering</div>
-          <div class="pub-authors"><strong>Chung, J.</strong>, Hu, D., Lee, SW. &amp; Lim, S.</div>
+          <div class="pub-title">Assessing Clinician Vigilance using Physiological Measures and Dynamic Bayesian Network Modeling</div>
+          <div class="pub-authors"><strong>Chung, J.*</strong>, Prendez, D.*, Higgins, EA. &amp; Kim, JE. <span style="font-size:.75rem;color:var(--muted)">(*Co-first author)</span></div>
           <div class="pub-venue">In Preparation</div>
         </div>
       </div>
       <div class="pub-item reveal reveal-delay-1">
         <span class="pub-badge journal progress">Journal<br />In Progress</span>
         <div>
-          <div class="pub-title">Toward Context-Aware and Personalized Sit-Stand Desk Interventions: Insights from a Field Observational Study</div>
-          <div class="pub-authors">Hu, D., <strong>Chung, J.</strong>, Vargas-Diaz, D., Lee, SW. &amp; Lim, S.</div>
+          <div class="pub-title">Predictive Model of Sit-Stand Desk Usage Patterns among Knowledge Workers and Customization based on Behavior Clustering</div>
+          <div class="pub-authors"><strong>Chung, J.</strong>, Hu, D., Lee, SW. &amp; Lim, S.</div>
           <div class="pub-venue">In Preparation</div>
         </div>
       </div>
       <div class="pub-item reveal reveal-delay-2">
+        <span class="pub-badge journal">Journal</span>
+        <div>
+          <div class="pub-title">Toward Context-Aware and Personalized Sit-Stand Desk Interventions: Insights from a Field Observational Study</div>
+          <div class="pub-authors">Hu, D., <strong>Chung, J.</strong>, Vargas-Diaz, D., Lee, SW. &amp; Lim, S.</div>
+          <div class="pub-venue">International Journal of Human-Computer Studies</div>
+        </div>
+      </div>
+      <div class="pub-item reveal reveal-delay-3">
+        <span class="pub-badge conference">Conference</span>
+        <div>
+          <div class="pub-title">Real-time Vigilance Monitoring via Biosignals: A Scoping Review</div>
+          <div class="pub-authors"><strong>Chung, J.</strong> &amp; Kim, JE.</div>
+          <div class="pub-venue">HFES Annual Meeting 2026</div>
+        </div>
+      </div>
+      <div class="pub-item reveal reveal-delay-1">
         <span class="pub-badge conference">Conference</span>
         <div>
           <div class="pub-title">Understanding the Context of Sit-Stand Desk Usage for Promoting Healthy and Productive Behaviors</div>
@@ -578,7 +609,7 @@
           <div class="pub-venue">HFES Annual Meeting 2025</div>
         </div>
       </div>
-      <div class="pub-item reveal reveal-delay-3">
+      <div class="pub-item reveal reveal-delay-2">
         <span class="pub-badge workshop">Workshop</span>
         <div>
           <div class="pub-title">Developing Context-Aware Sit-Stand Desks for Promoting Healthy and Productive Behaviors</div>
@@ -630,16 +661,21 @@
     <h2 class="section-title">Recognized<br /><em>Work</em></h2>
     <div class="awards-grid">
       <div class="award-card reveal">
+        <div class="award-year">2026</div>
+        <div class="award-title">Invited Talk · PSHFES Symposium</div>
+        <div class="award-org">From Vigilance Prediction to Adaptive Interventions</div>
+      </div>
+      <div class="award-card reveal reveal-delay-1">
         <div class="award-year">2025</div>
         <div class="award-title">Dean's Fellowship, College of Engineering</div>
         <div class="award-org">University of Washington · 2025–2029</div>
       </div>
-      <div class="award-card reveal reveal-delay-1">
+      <div class="award-card reveal reveal-delay-2">
         <div class="award-year">2025</div>
         <div class="award-title">Top Reviewer</div>
         <div class="award-org">HFES ASPIRE 2025</div>
       </div>
-      <div class="award-card reveal reveal-delay-2">
+      <div class="award-card reveal reveal-delay-3">
         <div class="award-year">2022</div>
         <div class="award-title">Social-Innovation Video Contest · 2nd Place</div>
         <div class="award-org">Yonsei University · Data Mining</div>
@@ -671,13 +707,13 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 10v7m0-4a3 3 0 0 1 6 0v4"/></svg>
           LinkedIn
         </a>
-        <a href="https://scholar.google.com/citations?user=luqWtdEAAAAJ" target="_blank" class="contact-link">
+        <a href="https://scholar.google.com/citations?user=_yF8Yt0AAAAJ&hl=en&oi=sra" target="_blank" class="contact-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12 12 0 0 1 .84 4.572 8 8 0 0 1-14 0 12 12 0 0 1 .84-4.572L12 14z"/><path d="M12 14v7"/></svg>
           Scholar
         </a>
       </div>
       <div class="cv-row">
-        <a href="Junghoon_CV_Updated.pdf" download class="btn btn-filled">
+        <a href="Junghoon_Chung_CV.pdf" download class="btn btn-filled">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download CV
         </a>
@@ -696,14 +732,10 @@
   <footer>
     <span class="footer-name">Junghoon Chung</span>
     <span class="footer-note">© 2025 · University of Washington · Seattle, WA</span>
+    <span class="footer-note" style="font-size:.58rem;opacity:.7">Last updated: June 2026</span>
   </footer>
 
   <script>
-    // Cursor
-    const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-    let mx=0,my=0,rx=0,ry=0;
-    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
-    (function a(){cursor.style.cssText=`left:${mx-5}px;top:${my-5}px`;rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.cssText=`left:${rx-17}px;top:${ry-17}px`;requestAnimationFrame(a)})();
 
     // Nav scroll
     const navbar=document.getElementById('navbar');
